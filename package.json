@@ -1,7 +1,8 @@
 {
   "name": "confirmation",
   "private": true,
-  "version": "0.0.0",
+  "homepage": "https://github.com/jo3ljimenez/invitation",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
