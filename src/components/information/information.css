@@ -1,0 +1,67 @@
+.informationContainer{
+    text-align: center;
+}
+
+.informationContainer h1{
+    font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.informationContainer h2{
+    font-family: 'Quicksand';
+    font-weight: normal;
+}
+
+/* Resolution max 360 pixels */
+@media screen and (max-width: 360px){
+    .informationContainer h1{
+        font-size: 40px;
+    }
+
+    .informationContainer h2{
+        font-size: 18px;
+    }
+}
+
+/* Resolution between 361 and 450 pixels */
+@media screen and (min-width: 361px) and (max-width: 450px){
+    .informationContainer h1{
+        font-size: 50px;
+    }
+
+    .informationContainer h2{
+        font-size: 25px;
+    }
+}
+
+/* Resolution between 451 and 900 pixels */
+@media screen and (min-width: 451px) and (max-width: 900px){
+    .informationContainer h1{
+        font-size: 60px;
+    }
+
+    .informationContainer h2{
+        font-size: 30px;
+    }
+}
+
+/* Resolution between 901 and 1370 pixels */
+@media screen and (min-width: 901px) and (max-width: 1370px){
+    .informationContainer h1{
+        font-size: 90px;
+    }
+
+    .informationContainer h2{
+        font-size: 50px;
+    }
+}
+
+/* Resolution greater than 1371*/
+@media screen and (min-width: 1371px){
+    .informationContainer h1{
+        font-size: 140px;
+    }
+
+    .informationContainer h2{
+        font-size: 70px;
+    }
+}
