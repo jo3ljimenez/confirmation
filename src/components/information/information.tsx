@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './information.css'
+import './information.css';
 
 const informationSection: FC <{title: string, message: string}> = 
                                 ({message, title}) => {
@@ -13,4 +13,4 @@ const informationSection: FC <{title: string, message: string}> =
     );
 }
 
-export default informationSection
+export default informationSection;

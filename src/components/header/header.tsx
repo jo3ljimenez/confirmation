@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import './header.css'
+import './header.css';
 
 const header: FC<{img: string}> = ({img}) => {    
     return (
@@ -14,4 +14,4 @@ const header: FC<{img: string}> = ({img}) => {
     );
 }
 
-export default header
+export default header;

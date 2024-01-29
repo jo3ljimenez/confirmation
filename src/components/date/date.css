@@ -1,0 +1,88 @@
+.sectionDateContainer{
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.placeDescription h1{
+    font-family: 'Quicksand';
+    font-weight: bolder;
+}
+
+.eventDate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Quicksand';
+}
+
+.separator{
+    background-color: rgb(131, 131, 131);
+    width: 1px;
+}
+
+.enventDay, .eventHour{
+    flex: 1;
+    text-align: center;
+    font-family: 'Quicksand'; 
+}
+
+.enventDay h2, .eventHour h2{
+    font-weight: 100;
+}
+
+/* Resolution max 360 pixels */
+@media screen and (max-width: 360px){
+    .separator{
+        height: 50px;
+    }
+
+    .enventDay h2, .eventHour h2{
+        font-size: 20px;
+    }
+}
+
+/* Resolution between 361 and 450 pixels */
+@media screen and (min-width: 361px) and (max-width: 450px){
+    .separator{
+        height: 60px;
+    }
+
+    .enventDay h2, .eventHour h2{
+        font-size: 25px;
+    }
+}
+
+/* Resolution between 451 and 900 pixels */
+@media screen and (min-width: 451px) and (max-width: 900px){
+    .separator{
+        height: 70px;
+    }    
+
+    .enventDay h2, .eventHour h2{
+        font-size: 30px;
+    }
+}
+
+/* Resolution between 901 and 1370 pixels */
+@media screen and (min-width: 901px) and (max-width: 1370px){
+    .separator{
+        height: 80px;
+    }
+
+    .enventDay h2, .eventHour h2{
+        font-size: 35px;
+    }
+}
+
+/* Resolution greater than 1371*/
+@media screen and (min-width: 1371px){
+   .separator{
+        height: 90px;
+    }
+
+    .enventDay h2, .eventHour h2{
+        font-size: 45px;
+    }
+}

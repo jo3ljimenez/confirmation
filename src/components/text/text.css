@@ -1,0 +1,49 @@
+.sectionContainer{
+    display: block;
+    margin: 0px;
+    padding: 10px 0px 0px 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.sectionContainer h2{
+    font-family: 'Quicksand';
+    font-weight: normal;  
+}
+
+/* Resolution max 360 pixels */
+@media screen and (max-width: 360px){
+
+    .sectionContainer h2{
+        font-size: 15px;
+    }
+}
+
+/* Resolution between 361 and 450 pixels */
+@media screen and (min-width: 361px) and (max-width: 450px){
+    .sectionContainer h2{
+        font-size: 20px;
+    }
+}
+
+/* Resolution between 451 and 900 pixels */
+@media screen and (min-width: 451px) and (max-width: 900px){
+    .sectionContainer h2{ 
+        font-size: 30px;
+    }
+}
+
+/* Resolution between 901 and 1370 pixels */
+@media screen and (min-width: 901px) and (max-width: 1370px){
+    .sectionContainer h2{
+        font-size: 40px;
+    }
+}
+/* Resolution greater than 1371*/
+@media screen and (min-width: 1371px){
+
+
+    .sectionContainer h2{
+        font-size: 60px;
+    }
+}
