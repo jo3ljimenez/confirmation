@@ -1,0 +1,16 @@
+export const GALLERY01 = 'https://photos.app.goo.gl/cey4LHgdp7Z212Yz5';
+export const GALLERY02 = 'https://photos.app.goo.gl/9bXnMybkpCjtkXQk9';
+export const GALLERY03 = 'https://photos.app.goo.gl/At4A5dwFXPRvXiRx8';
+export const GALLERY04 = 'https://photos.app.goo.gl/a7k9XnxQ8x171N9R7';
+export const GALLERY05 = 'https://photos.app.goo.gl/cmSbiUHsT8LLBhvJ9';
+export const GALLERY06 = 'https://previews.dropbox.com/p/thumb/ACL6KCnVkr37DAC0y8YqArK0YkeQsrpEHr0-yNuwmQz3qduSBFXHz6DWCWG5Co0EVmoCJbXBdfL-UqbtOrQ0sP2rWqJKOQN8kVLJh4SIK_uzHNQOM5rYE04Qqd2myDDDMznw1VFbnwoKWcgL3aiqhkyBTUJexBvmbFgjPAwRhXIArU3RoAASeG3qSwH_PlBxwYMzYK7hvc4x7oW_qa5Y8rTCsj-t_Y-f9cN4zDhrmpet7EPSac5jplfYHN_2ntHUVqIPQbmmeSSMK8qTy8xyqwIAX2QYGkkkBjrMMMRpQ8PPBliKoqcSw8EUdt4xO051C2O2_sCGLi7uY1yxPbWlml35/p.jpeg';
+export const GALLERY07 = 'https://photos.app.goo.gl/FVRjnBe6NeZoJRXx6';
+export const GALLERY08 = 'https://photos.app.goo.gl/auAVpW1QeZVpj8RMA';
+export const GALLERY09 = 'https://photos.app.goo.gl/1FRywNdU51A78TYK9';
+export const GALLERY10 = 'https://photos.app.goo.gl/bhWFAGwUeGFodpf59';
+export const GALLERY11 = 'https://photos.app.goo.gl/tPxjjWpVqMTgdwtp8';
+export const RINGS = 'https://photos.app.goo.gl/tPxjjWpVqMTgdwtp8';
+export const GIFTS = 'https://photos.app.goo.gl/sa2ee84qQDsGZBPq5';
+export const CLOTHES = 'https://photos.app.goo.gl/Czw1gF8Y1r6cGoAA6';
+export const WINE = 'https://photos.app.goo.gl/28ZTrPp61w6DzCNr9';
+export const CONFIRMATION = 'https://photos.app.goo.gl/CEQcms3yjbcFhht7A';
