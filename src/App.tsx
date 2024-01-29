@@ -8,7 +8,10 @@ import GallerySeparatorSection from './components/gallerySeparator/gallerySepara
 import TitleSection from './components/title/title';
 import DateSection from './components/date/date';
 import TextComponent from './components/text/text';
+import ButtonSection from './components/button/button';
+import ColorsSection from './components/colors/colors';
 import MEDIASOURCE from './sourcesConstants';
+import { getLocationMap } from './components/generalFunctions';
 
 function App() {
   return (
@@ -41,9 +44,19 @@ function App() {
                                   hour='18:00'/> </li>
         <li className='section'> <TextComponent 
                                   information='El puente colorado'/> </li>
+        <li className='section'> <ButtonSection
+                                  bottonName='Ver Ubicación'
+                                  idButton='locationButton'
+                                  onClick={getLocationMap}/> </li>
         <li className='section'> <GallerySeparatorSection 
                                   leftImg={MEDIASOURCE.image07}
                                   rightImg={MEDIASOURCE.image06} /></li>
+        <li className='section'><TitleSection
+                                 icon={MEDIASOURCE.clothes}
+                                 title='Rigurosa etiqueta' 
+                                 description='Por respeto a la novia, no usar los siguientes colores'
+                                 /></li>
+        <li className='section'> <ColorsSection /> </li>                          
         {/* <li className='section'></li> */}
       </ul>
     </>

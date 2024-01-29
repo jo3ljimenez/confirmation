@@ -1,0 +1,62 @@
+.buttonContainer{
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.buttonComponent{
+    background-color: #8f8279;
+    color: white;
+    font-weight: bolder;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin: 30px 0px 0px 0px;
+    transition: 0.3s;
+    width: 60%;
+}
+
+.buttonComponent:active{
+    background-color: rgb(114, 108, 87);
+}
+
+/* Resolution max 360 pixels */
+@media screen and (max-width: 360px){
+    .buttonComponent{
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+/* Resolution between 361 and 450 pixels */
+@media screen and (min-width: 361px) and (max-width: 450px){
+    .buttonComponent{
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+/* Resolution between 451 and 900 pixels */
+@media screen and (min-width: 451px) and (max-width: 900px){
+    .buttonComponent{
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+/* Resolution between 901 and 1370 pixels */
+@media screen and (min-width: 901px) and (max-width: 1370px){
+    .buttonComponent{
+        height: 55px;
+        font-size: 20px;
+    }
+}
+
+/* Resolution greater than 1371*/
+@media screen and (min-width: 1371px){
+    .buttonComponent{
+        height: 60px;
+        font-size: 24px;
+    }
+}

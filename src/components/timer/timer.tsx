@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../circles.css';
+import '../circle.css';
 import calcualteWeddingDay from './timerScript';
 
 
