@@ -1,0 +1,125 @@
+.mainContiner{
+    width: 100%;
+}
+
+.mainContiner h1{
+    font-family: 'Abhaya', Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+
+.circleContainer{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+.circleSectionContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle{
+    display: flex;
+    background-color: #8f8279;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.circle h2{
+    color: #fdf7f7;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Quicksand'; 
+}
+
+.circleSectionContainer h4{
+    font-family: 'Quicksand';
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.842);
+    margin: 0px;
+}
+
+/* Resolution max 360 pixels */
+@media screen and (max-width: 360px){
+    .circle{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .circle h2{
+        font-size: 20px;
+    }
+    
+    .circleSectionContainer h4{
+        font-size: 12px;
+    }
+}
+
+/* Resolution between 361 and 450 pixels */
+@media screen and (min-width: 361px) and (max-width: 450px){
+    .circle{
+        width: 55px;
+        height: 55px;
+    }
+    
+    .circle h2{
+        font-size: 30px;
+    }
+    
+    .circleSectionContainer h4{
+        font-size: 16px;
+    }
+}
+
+/* Resolution between 451 and 900 pixels */
+@media screen and (min-width: 451px) and (max-width: 900px){
+    .circle{
+        width: 65px;
+        height: 65px;
+    }
+    
+    .circle h2{
+        font-size: 40px;
+    }
+    
+    .circleSectionContainer h4{
+        font-size: 20px;
+    }
+}
+
+/* Resolution between 901 and 1370 pixels */
+@media screen and (min-width: 901px) and (max-width: 1370px){
+    .circle{
+        width: 85px;
+        height: 85px;
+    }
+    
+    .circle h2{
+        font-size: 50px;
+    }
+    
+    .circleSectionContainer h4{
+        font-size: 28px;
+    }
+}
+
+/* Resolution greater than 1371*/
+@media screen and (min-width: 1371px){
+    .circle{
+        width: 120px;
+        height: 120px;
+    }
+    
+    .circle h2{
+        font-size: 70px;
+    }
+    
+    .circleSectionContainer h4{
+        font-size: 35px;
+    }
+}
