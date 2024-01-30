@@ -1,6 +1,7 @@
 import axios from 'axios';
+import AlertDialog from '../alertDialog/alertDialog';
 
-const addNameAndConfirmationToGithub = async (
+export const addNameAndConfirmationToGithub = async (
   name: string,
   confirmation: string,
   credentials: {
@@ -10,10 +11,12 @@ const addNameAndConfirmationToGithub = async (
     filePath: string,
   } 
 ): Promise<void> => {
+  let error = false;
+
   try {
-    // Obtener el contenido actual
+    console.log(credentials);    // Obtener el contenido actual
     const response = await axios.get(
-      `https://api.github.com/repos/${credentials['repositoryOwner ']}/${credentials.repositoryName}/contents/${credentials.filePath}`,
+      `https://api.github.com/repos/${credentials.repositoryOwner}/${credentials.repositoryName}/contents/${credentials.filePath}`,
       {
         headers: {
           Authorization: `token ${credentials.token}`,
@@ -28,7 +31,7 @@ const addNameAndConfirmationToGithub = async (
 
     // Actualizar el archivo en GitHub
     await axios.put(
-      `https://api.github.com/repos/${credentials['repositoryOwner ']}/${credentials.repositoryName}/contents/${credentials.filePath}`,
+      `https://api.github.com/repos/${credentials.repositoryOwner}/${credentials.repositoryName}/contents/${credentials.filePath}`,
       {
         message: 'Actualizar archivo desde React',
         content: btoa(updatedContent),
@@ -43,8 +46,9 @@ const addNameAndConfirmationToGithub = async (
 
     console.log('Archivo actualizado con éxito');
   } catch (error) {
+    error = true;
     console.error('Error al agregar nombre y confirmación:', error);
   }
-};
 
-export default addNameAndConfirmationToGithub;
+  AlertDialog(name, confirmation, error);
+};

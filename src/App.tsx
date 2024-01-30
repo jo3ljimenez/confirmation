@@ -16,6 +16,7 @@ import ComboBoxComponent from './components/comboBox/comboBox';
 import MEDIASOURCE from './sourcesConstants';
 import {  getAmazonGiftTable, getLiverpoolGiftTable, getLocationMap, 
           getMercadoLibreGiftTable  } from './components/generalFunctions';
+import { addNameAndConfirmationToGithub } from'./components/button/addNameAndConfirmationToGithub';
 
 function App() {
   const [inputValue, setInputValue] = useState<string>('');
@@ -32,9 +33,9 @@ function App() {
 
   const credentials = {
     token: import.meta.env.VITE_GITHUB_TOKEN as string,
-    repositoryOwner: import.meta.env.VITE_GITHUB_REPOSITORY_OWNER as string,
-    repositoryName: import.meta.env.VITE_GITHUB_REPOSITORY_NAME as string,
-    filePath: import.meta.env.VITE_GITHUB_FILE_PATH as string,
+    repositoryOwner: import.meta.env.VITE_REPOSITORY_OWNER as string,
+    repositoryName: import.meta.env.VITE_REPOSITORY_NAME as string,
+    filePath: import.meta.env.VITE_REPOSITORY_FILE_PATH as string,
   };
 
   return (
@@ -122,8 +123,10 @@ function App() {
         <li className='section'> <ButtonComponent  
                                   bottonName='Enviar Respuesta'
                                   idButton='confirmationButton'
-                                  onClick={() => addNameAndConfirmationToGithub(inputValue, selectedValue)}/> </li>
-        {/* <li className='section'></li> */}
+                                  onClick={() => addNameAndConfirmationToGithub(inputValue, selectedValue, credentials)}/> </li>
+        <li className='section'> <GallerySeparatorComponent  
+                                  leftImg={MEDIASOURCE.image03}
+                                  rightImg={MEDIASOURCE.image11} /></li>
       </ul>
     </>
   )
