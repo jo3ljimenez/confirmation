@@ -16,7 +16,8 @@ import ComboBoxComponent from './components/comboBox/comboBox';
 import MEDIASOURCE from './sourcesConstants';
 import {  getAmazonGiftTable, getLiverpoolGiftTable, getLocationMap, 
           getMercadoLibreGiftTable  } from './components/generalFunctions';
-import { addNameAndConfirmationToGithub } from './components/button/addNameAndConfirmationToGithub';
+import { addListConfirmation } from './components/button/addListConfirmation';
+
 
 function App() {
   const [inputValue, setInputValue] = useState<string>('');
@@ -123,7 +124,7 @@ function App() {
         <li className='section'> <ButtonComponent  
                                   bottonName='Enviar Respuesta'
                                   idButton='confirmationButton'
-                                  onClick={() => addNameAndConfirmationToGithub(inputValue, selectedValue, credentials)}/> </li>
+                                  onClick={() => addListConfirmation(inputValue, selectedValue, credentials)}/> </li>
         <li className='section'> <GallerySeparatorComponent  
                                   leftImg={MEDIASOURCE.image03}
                                   rightImg={MEDIASOURCE.image11} /></li>
