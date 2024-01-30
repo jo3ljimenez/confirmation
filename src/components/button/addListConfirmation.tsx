@@ -12,7 +12,8 @@ export const addListConfirmation = async (
 ): Promise<void> => {
   let error = false;
   let message = '';
-  let decode = credentials.token.replace('?','');
+  let decode = credentials.token.replace(/\?/g,'');
+  console.log(decode);
 
   try {
     console.log(credentials);    // Obtener el contenido actual
