@@ -12,6 +12,7 @@ export const addListConfirmation = async (
 ): Promise<void> => {
   let error = false;
   let message = '';
+  let decode = credentials.token.replace('?','');
 
   try {
     console.log(credentials);    // Obtener el contenido actual
@@ -19,7 +20,7 @@ export const addListConfirmation = async (
       `https://api.github.com/repos/${credentials.repositoryOwner}/${credentials.repositoryName}/contents/${credentials.filePath}`,
       {
         headers: {
-          Authorization: `token ${credentials.token}`,
+          Authorization: `token ${decode}`,
         },
       }
     );
@@ -39,7 +40,7 @@ export const addListConfirmation = async (
       },
       {
         headers: {
-          Authorization: `token ${credentials.token}`,
+          Authorization: `token ${decode}`,
         },
       }
     );
