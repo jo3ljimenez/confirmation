@@ -12,3 +12,7 @@ export const getLocationMap = () => {
     const liverpoolGiftTable = 'https://mesaderegalos.liverpool.com.mx/milistaderegalos/51325958';
     window.open(liverpoolGiftTable, '_blank');
   }
+
+  export const getMercadoLibreGiftTable = () => {
+    alert('Mesa no dispobile');
+  }

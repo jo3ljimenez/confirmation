@@ -1,0 +1,70 @@
+.banckAccountContainer{
+    display: grid;
+    padding: 1px 0px ; 
+    background-color: #8f8279;
+    text-align: center;
+    place-items: center;
+    font-family: 'Quicksand';
+    color: white;
+}
+
+.bankAccountInfo{
+    align-content: center;
+    border: solid 1px white;
+    width: max-content;
+    padding: 10px 10px 20px 10px;
+}
+
+.banckAccountContainer h2{
+    margin: 0px;
+}
+
+/* Resolution max 360 pixels */
+@media screen and (max-width: 360px){
+    .banckAccountContainer h1{
+        font-size: 30px;
+    }
+    .banckAccountContainer h2{
+        font-size: 15px;
+    }
+}
+
+/* Resolution between 361 and 450 pixels */
+@media screen and (min-width: 361px) and (max-width: 450px){
+    .banckAccountContainer h1{
+        font-size: 40px;
+    }
+    .banckAccountContainer h2{
+        font-size: 20px;
+    }
+}
+
+/* Resolution between 451 and 900 pixels */
+@media screen and (min-width: 451px) and (max-width: 900px){
+    .banckAccountContainer h1{
+        font-size: 50px;
+    }
+    .banckAccountContainer h2{
+        font-size: 30px;
+    }
+}
+
+/* Resolution between 901 and 1370 pixels */
+@media screen and (min-width: 901px) and (max-width: 1370px){
+    .banckAccountContainer h1{
+        font-size: 70px;
+    }
+    .banckAccountContainer h2{
+        font-size: 40px;
+    }
+}
+
+/* Resolution greater than 1371*/
+@media screen and (min-width: 1371px){
+    .banckAccountContainer h1{
+        font-size: 100px;
+    }
+    .banckAccountContainer h2{
+        font-size: 60px;
+    }
+}

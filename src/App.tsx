@@ -10,8 +10,10 @@ import DateSection from './components/date/date';
 import TextComponent from './components/text/text';
 import ButtonSection from './components/button/button';
 import ColorsSection from './components/colors/colors';
+import BankAccount from './components/bankAccount/bankAccount';
 import MEDIASOURCE from './sourcesConstants';
-import { getLocationMap } from './components/generalFunctions';
+import {  getAmazonGiftTable, getLiverpoolGiftTable, getLocationMap, 
+          getMercadoLibreGiftTable  } from './components/generalFunctions';
 
 function App() {
   return (
@@ -56,7 +58,34 @@ function App() {
                                  title='Rigurosa etiqueta' 
                                  description='Por respeto a la novia, no usar los siguientes colores'
                                  /></li>
-        <li className='section'> <ColorsSection /> </li>                          
+        <li className='section'> <ColorsSection /> </li>
+        <li className='section'> <GallerySeparatorSection 
+                                  leftImg={MEDIASOURCE.image09}
+                                  rightImg={MEDIASOURCE.image08} /></li>
+        <li className='section'><TitleSection 
+                                  icon={MEDIASOURCE.gifts}
+                                  title='Regalos'
+                                  description='Tu presencia es nuestro mejor regalo, pero si es tu voluntad hacernos un regalo, 
+                                  dejamos a tu disposición nuestros datos'
+                                  /></li>                          
+        <li className='section'> <BankAccount /> </li>
+        <li className='section'> <TextComponent 
+                                  information='Mesas De Regalos'/> </li>
+        <li className='section'> <ButtonSection
+                                  bottonName='Amazon'
+                                  idButton='amazonButton'
+                                  onClick={getAmazonGiftTable}/> </li>
+        <li className='section'> <ButtonSection
+                                  bottonName='Liverpool'
+                                  idButton='liverpoolButton'
+                                  onClick={getLiverpoolGiftTable}/> </li>
+        <li className='section'> <ButtonSection
+                                  bottonName='Mercado Libre'
+                                  idButton='mercadoLibreButton'
+                                  onClick={getMercadoLibreGiftTable}/> </li>
+        <li className='section'> <GallerySeparatorSection 
+                                  leftImg={MEDIASOURCE.image10}
+                                  rightImg={MEDIASOURCE.image02} /></li>
         {/* <li className='section'></li> */}
       </ul>
     </>
