@@ -1,5 +1,4 @@
 import axios from 'axios';
-import AlertDialog from '../alertDialog/alertDialog';
 
 export const addNameAndConfirmationToGithub = async (
   name: string,
@@ -12,6 +11,7 @@ export const addNameAndConfirmationToGithub = async (
   } 
 ): Promise<void> => {
   let error = false;
+  let message = '';
 
   try {
     console.log(credentials);    // Obtener el contenido actual
@@ -50,5 +50,15 @@ export const addNameAndConfirmationToGithub = async (
     console.error('Error al agregar nombre y confirmación:', error);
   }
 
-  AlertDialog(name, confirmation, error);
+  if(!error){
+      if(confirmation === 'SI'){
+          message = `Gracias por confirmar tu asistencia ${name.trim().split(/\s+/)[0]}, nos da gusto que nos acompañes en este día tan especial para nosotros :D`;
+      }else{
+          message = `Lamentamos que no puedas acompañarnos, esperamos que nos veamos pronto :D`;
+      }
+  }else{
+      message = 'Error al tratar de enviar tu respuesta, por contacta a los novios para informarles.';
+  }
+
+  alert(message);
 };

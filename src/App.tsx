@@ -55,7 +55,7 @@ function App() {
                                   title='Ceremonia'
                                   description='San Blas, El Fuerte, Sinaloa'/> </li>
         <li className='section'> <DateComponent  
-                                  day='9'
+                                  day='9 Marzo'
                                   hour='16:00'/> </li>
         <li className='section'> <TextComponent 
                                   information='El puente colorado'/> </li>
@@ -64,7 +64,7 @@ function App() {
                                   title='Celebración'
                                   description='San Blas, El Fuerte, Sinaloa'/> </li>
         <li className='section'> <DateComponent  
-                                  day='9'
+                                  day='9 Marzo'
                                   hour='18:00'/> </li>
         <li className='section'> <TextComponent 
                                   information='El puente colorado'/> </li>
