@@ -1,0 +1,22 @@
+.comboBoxContainer{
+    width: 100%;
+    text-align: center;
+}
+
+select{
+    width: 92%;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+    font-size: large;
+    height: 40px;
+    border: solid gray;
+    color: gray;
+}
+
+select:focus{
+    outline: none;
+}
+
+select option{
+    text-align: center;
+}

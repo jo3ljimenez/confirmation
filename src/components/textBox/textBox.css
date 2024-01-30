@@ -1,0 +1,13 @@
+.textBoxContainer{
+    width: 100%;
+    text-align: center;
+}
+
+input{
+    width: 90%;
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+    font-size: large;
+    height: 40px;
+    border: solid gray;
+}
