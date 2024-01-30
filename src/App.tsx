@@ -16,7 +16,7 @@ import ComboBoxComponent from './components/comboBox/comboBox';
 import MEDIASOURCE from './sourcesConstants';
 import {  getAmazonGiftTable, getLiverpoolGiftTable, getLocationMap, 
           getMercadoLibreGiftTable  } from './components/generalFunctions';
-import { addNameAndConfirmationToGithub } from'./components/button/addNameAndConfirmationToGithub';
+import { addNameAndConfirmationToGithub } from './components/button/addNameAndConfirmationToGithub';
 
 function App() {
   const [inputValue, setInputValue] = useState<string>('');
