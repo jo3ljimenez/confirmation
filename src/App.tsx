@@ -83,7 +83,7 @@ function App() {
         <li className='section'><TitleComponent  
                                  icon={MEDIASOURCE.clothes}
                                  title='Rigurosa etiqueta' 
-                                 description='Por respeto a laButtonComponent   novia, no usar los siguientes colores'
+                                 description='Por respeto a la novia, no usar los siguientes colores'
                                  /></li>
         <li className='section'> <ColorsComponent  /> </li>
         <li className='section'> <GallerySeparatorComponent  
