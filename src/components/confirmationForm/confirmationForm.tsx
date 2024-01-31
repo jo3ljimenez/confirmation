@@ -1,4 +1,5 @@
 import { ChangeEvent, useState } from "react";
+import axios from 'axios';
 import '../button/button.css';
 import '../textBox/textBox.css';
 import '../comboBox/comboBox.css';
@@ -14,6 +15,13 @@ const confirmationForm = () => {
     const [open, setOpen] = useState(false);
     const [fullName, setfullName] = useState('');
     const [answer, setAnswer] = useState<string>('');
+
+    const credentials = {
+        token: import.meta.env.VITE_GITHUB_TOKEN as string,
+        repositoryOwner: import.meta.env.VITE_REPOSITORY_OWNER as string,
+        repositoryName: import.meta.env.VITE_REPOSITORY_NAME as string,
+        filePath: import.meta.env.VITE_REPOSITORY_FILE_PATH as string,
+    };
 
     const handleFullName = (event: ChangeEvent<HTMLInputElement>) => {
         const value: string = event.target.value.replace(/[^a-z\s]/gi, '');
@@ -31,19 +39,58 @@ const confirmationForm = () => {
                 position: "top-center",
                 theme: "colored"
             })
-
             setOpen(false);
         }else{
-            toast.success("Tu respuesta envió con éxito. Gracias por confirmar: esto es una prueba.", {
-                position: "top-center",
-                theme: "colored"
-            });
-
+            notify();
             setfullName('');
             setAnswer('');
             setOpen(false);
         }
-    }
+    };
+
+    const addListConfirmation = async ( ): Promise<void> => {
+        let decode = credentials.token.replace(/\?/g,'');
+            try {
+            const response = await axios.get(
+                `https://api.github.com/repos/${credentials.repositoryOwner}/${credentials.repositoryName}/contents/${credentials.filePath}`,
+                {
+                    headers: {
+                        Authorization: `token ${decode}`,
+                    },
+                }
+            );
+      
+        const currentContent = atob(response.data.content);    
+        // Agregar el nuevo nombre y confirmación
+        const updatedContent = `${currentContent}\n${fullName}\t${answer}`;
+        // Actualizar el archivo en GitHub
+        await axios.put(
+            `https://api.github.com/repos/${credentials.repositoryOwner}/${credentials.repositoryName}/contents/${credentials.filePath}`,{
+                message: `Se agrega el nombre ${fullName}`,
+                content: btoa(updatedContent),
+                sha: response.data.sha,
+            },
+            {
+                headers: {
+                Authorization: `token ${decode}`,
+                },
+            }
+        );
+    
+        console.log('Archivo actualizado con éxito');
+        } catch (error) {
+            console.error('Error al agregar nombre y confirmación:', error);
+        }
+    };
+    const notify = () => toast.promise(
+        addListConfirmation, 
+        {
+            pending: 'Enviando respuesta...',
+            success: `Tu respuesta envió con éxito ${fullName.trim().split(/\s+/)[0]}. Gracias por confirmar.`,
+            error: `No se pudo enviar tu respuesta, Favor de reportar el problema a los novios.`,
+        },
+        {theme: "colored"}
+    );
   
     return (
     <>

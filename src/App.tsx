@@ -58,7 +58,7 @@ function App() {
         <li className='section'> <TitleComponent  
                                   icon={MEDIASOURCE.rings}
                                   title='Ceremonia'
-                                  description='San Blas, El Fuerte, Sinaloa'/> </li>
+                                  description={<span>San Blas, El Fuerte, Sinaloa</span>}/> </li>
         <li className='section'> <DateComponent  
                                   day='9 Marzo'
                                   hour='16:00'/> </li>
@@ -67,7 +67,7 @@ function App() {
         <li className='section'> <TitleComponent  
                                   icon={MEDIASOURCE.wine}
                                   title='Celebración'
-                                  description='San Blas, El Fuerte, Sinaloa'/> </li>
+                                  description={<span>San Blas, El Fuerte, Sinaloa</span>}/> </li>
         <li className='section'> <DateComponent  
                                   day='9 Marzo'
                                   hour='18:00'/> </li>
@@ -83,7 +83,7 @@ function App() {
         <li className='section'><TitleComponent  
                                  icon={MEDIASOURCE.clothes}
                                  title='Rigurosa etiqueta' 
-                                 description='Por respeto a la novia, no usar los siguientes colores'
+                                 description={<span>Por respeto a la novia, <b>NO</b> usar los siguientes colores</span>}
                                  /></li>
         <li className='section'> <ColorsComponent  /> </li>
         <li className='section'> <GallerySeparatorComponent  
@@ -92,8 +92,7 @@ function App() {
         <li className='section'><TitleComponent  
                                   icon={MEDIASOURCE.gifts}
                                   title='Regalos'
-                                  description='Tu presencia es nuestro mejor regalo, pero si es tu voluntad hacernos un regalo, 
-                                  dejamos a tu disposición nuestros datos'
+                                  description={<span>Tu presencia es nuestro mejor regalo, pero si es tu voluntad hacernos un regalo, dejamos a tu disposición nuestros datos</span>}
                                   /></li>                          
         <li className='section'> <BankAccount /> </li>
         <li className='section'> <TextComponent 

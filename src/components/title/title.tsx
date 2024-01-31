@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import './title.css';
 
 const title: 
-    FC <{icon: string, title: string, description: string}> = 
+    FC <{icon: string, title: string, description: React.ReactNode}> = 
     ({icon, title, description}) => {
     return (
         <>
