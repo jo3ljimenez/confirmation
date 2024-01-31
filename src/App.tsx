@@ -11,34 +11,38 @@ import TextComponent from './components/text/text';
 import ButtonComponent  from './components/button/button';
 import ColorsComponent  from './components/colors/colors';
 import BankAccount from './components/bankAccount/bankAccount';
-import TextBoxComponent from './components/textBox/textBox';
-import ComboBoxComponent from './components/comboBox/comboBox';
+// import TextBoxComponent from './components/textBox/textBox';
+// import ComboBoxComponent from './components/comboBox/comboBox';
 import MEDIASOURCE from './sourcesConstants';
 import {  getAmazonGiftTable, getLiverpoolGiftTable, getLocationMap, 
           getMercadoLibreGiftTable  } from './components/generalFunctions';
-import { addListConfirmation } from './components/button/addListConfirmation';
+// import { addListConfirmation } from './components/button/addListConfirmation';
 
+// Testing
+import ConfirmationForm from './components/confirmationForm/confirmationForm';
 
 function App() {
-  const [inputValue, setInputValue] = useState<string>('');
+  // const [inputValue, setInputValue] = useState<string>('');
 
-  const [selectedValue, setSelectedValue] = useState<string>('');
+  // const [selectedValue, setSelectedValue] = useState<string>('');
 
-  const handleInputValue = (value: string) => {
-    setInputValue(value);
-  };
+  // const handleInputValue = (value: string) => {
+  //   setInputValue(value);
+  // };
 
-  const handleSelectValue= (value: string) => {
-    setSelectedValue(value);
-  };
+  // const handleSelectValue= (value: string) => {
+  //   setSelectedValue(value);
+  // };
 
-  const credentials = {
-    token: import.meta.env.VITE_GITHUB_TOKEN as string,
-    repositoryOwner: import.meta.env.VITE_REPOSITORY_OWNER as string,
-    repositoryName: import.meta.env.VITE_REPOSITORY_NAME as string,
-    filePath: import.meta.env.VITE_REPOSITORY_FILE_PATH as string,
-  };
+  // const credentials = {
+  //   token: import.meta.env.VITE_GITHUB_TOKEN as string,
+  //   repositoryOwner: import.meta.env.VITE_REPOSITORY_OWNER as string,
+  //   repositoryName: import.meta.env.VITE_REPOSITORY_NAME as string,
+  //   filePath: import.meta.env.VITE_REPOSITORY_FILE_PATH as string,
+  // };
 
+  // const notify = () => toast("This is a toast notification !");
+  
   return (
     <>
       <ul>
@@ -113,7 +117,8 @@ function App() {
                                   icon={MEDIASOURCE.confirmation}
                                   title='Confirmación'
                                   description=''/> </li>
-        <li className='section'> <TextBoxComponent 
+        <li className='section'> <ConfirmationForm /> </li>
+        {/* <li className='section'> <TextBoxComponent 
                                   idTextBox='tbName'
                                   placeholder='Nombre Completo'
                                   onInputChange={handleInputValue} /> </li>
@@ -124,7 +129,7 @@ function App() {
         <li className='section'> <ButtonComponent  
                                   bottonName='Enviar Respuesta'
                                   idButton='confirmationButton'
-                                  onClick={() => addListConfirmation(inputValue, selectedValue, credentials)}/> </li>
+                                  onClick={() => addListConfirmation(inputValue, selectedValue, credentials)}/> </li> */}
         <li className='section'> <GallerySeparatorComponent  
                                   leftImg={MEDIASOURCE.image03}
                                   rightImg={MEDIASOURCE.image11} /></li>
