@@ -34,7 +34,7 @@ const confirmationForm = () => {
 
             setOpen(false);
         }else{
-            toast.success("Success Notification !", {
+            toast.success("Tu respuesta envió con éxito. Gracias por confirmar: esto es una prueba.", {
                 position: "top-center",
                 theme: "colored"
             });
