@@ -4,7 +4,7 @@ const AudioSection: React.FC <{audio: string}> = ({audio}) => {
     return(
         <>
         <div className='audioContainer'>
-            <audio autoPlay>
+            <audio controls autoPlay>
                 <source src={audio} type="audio/mp3" />
             </audio>
         </div>
