@@ -15,6 +15,9 @@ const date: FC <{day: string, hour: string}> =
                     <h2 id='eventHour'>{hour}</h2>
                 </div>
             </div>
+            <div className='enventDay'>
+                <h2 id='eventDay'>2024</h2>
+            </div>
         </div>
         </>
     )

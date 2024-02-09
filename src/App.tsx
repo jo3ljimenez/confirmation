@@ -12,8 +12,7 @@ import ButtonComponent  from './components/button/button';
 import ColorsComponent  from './components/colors/colors';
 import BankAccount from './components/bankAccount/bankAccount';
 import MEDIASOURCE from './sourcesConstants';
-import {  getAmazonGiftTable, getLiverpoolGiftTable, getLocationMap, 
-          getMercadoLibreGiftTable  } from './components/generalFunctions';
+import {  getAmazonGiftTable, getLiverpoolGiftTable, getLocationMap} from './components/generalFunctions';
 import ConfirmationForm from './components/confirmationForm/confirmationForm';
 
 function App() {  
@@ -23,7 +22,7 @@ function App() {
         <li className='section'> <HeaderComponent  img={MEDIASOURCE.image01}/> </li>
         <li className='section'> <AudioComponent  audio={MEDIASOURCE.mainAudio}/> </li>
         <li className='section'> <InformationComponent  
-                                  title='Estás invitando'
+                                  title='Estás invitando a nuestra boda'
                                   message='Queremos que seas parte de este momento especial' /></li>
         <li className='section'> <TimerComponent  /> </li>
         <li className='section'> <GallerySeparatorComponent  
@@ -79,10 +78,6 @@ function App() {
                                   bottonName='Liverpool'
                                   idButton='liverpoolButton'
                                   onClick={getLiverpoolGiftTable}/> </li>
-        <li className='section'> <ButtonComponent  
-                                  bottonName='Mercado Libre'
-                                  idButton='mercadoLibreButton'
-                                  onClick={getMercadoLibreGiftTable}/> </li>
         <li className='section'> <GallerySeparatorComponent  
                                   leftImg={MEDIASOURCE.image10}
                                   rightImg={MEDIASOURCE.image02} /></li>

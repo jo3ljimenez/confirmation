@@ -98,12 +98,14 @@ const confirmationForm = () => {
             <div className="textBoxContainer">
                 <input  type="text" 
                         placeholder='Nombre Completo'
+                        id="fullName"
                         value={fullName}
                         onChange={handleFullName}/>
             </div>
 
             <div className="comboBoxContainer">
                 <select
+                    id="answer"
                     onChange={(e) => handleSelectValue(e.target.value)}
                     value={answer}>
                     <option value="">Respuesta</option>
