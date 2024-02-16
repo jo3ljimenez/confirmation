@@ -22,7 +22,7 @@ function App() {
         <li className='section'> <HeaderComponent  img={MEDIASOURCE.image01}/> </li>
         <li className='section'> <AudioComponent  audio={MEDIASOURCE.mainAudio}/> </li>
         <li className='section'> <InformationComponent  
-                                  title='Estás invitando a nuestra boda'
+                                  title='Estás invitado a nuestra boda'
                                   message='Queremos que seas parte de este momento especial' /></li>
         <li className='section'> <TimerComponent  /> </li>
         <li className='section'> <GallerySeparatorComponent  
